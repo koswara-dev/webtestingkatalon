@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Test Suite</name>
+   <name>TestError</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,19 +10,12 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>615865b5-4a08-42cb-8392-b47577727e38</testSuiteGuid>
+   <testSuiteGuid>879e7f84-8237-4e8c-b534-dd9daa12f5c8</testSuiteGuid>
    <testCaseLink>
-      <guid>85a4e53d-c8c7-4594-852f-dae4b526edb4</guid>
+      <guid>35af42a3-fb0b-42e5-86dd-57ffe519db74</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Test Login</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>a4005f02-71eb-4eb5-a16c-519a45f9c906</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Test Dashboard</testCaseId>
+      <testCaseId>Test Cases/Test Text Box</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

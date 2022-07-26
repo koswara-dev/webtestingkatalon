@@ -3,6 +3,8 @@ import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
+
+import com.juaracoding.fundamental.ExampleLoops
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
@@ -39,7 +41,13 @@ WebUI.verifyElementText(findTestObject('Object Repository/Page_ToolsQA/p_NameKos
 
 WebUI.verifyElementText(findTestObject('Object Repository/Page_ToolsQA/p_Emailtestemail.com'), 'Email:test@email.com')
 
-WebUI.verifyElementText(findTestObject('Page_ToolsQA/p_Current Address kuningan'), 'Current Address :Kuningan')
+WebUI.verifyElementText(findTestObject('Page_ToolsQA/p_Current Address kuningan'), 'Current Address :Kuningan1')
+
+WebUI.click(findTestObject(''))
+
+ExampleLoops bebas = new ExampleLoops()
+
+bebas.kotak(3)
 
 WebUI.closeBrowser()
 
