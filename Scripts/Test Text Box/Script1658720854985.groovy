@@ -41,13 +41,9 @@ WebUI.verifyElementText(findTestObject('Object Repository/Page_ToolsQA/p_NameKos
 
 WebUI.verifyElementText(findTestObject('Object Repository/Page_ToolsQA/p_Emailtestemail.com'), 'Email:test@email.com')
 
-WebUI.verifyElementText(findTestObject('Page_ToolsQA/p_Current Address kuningan'), 'Current Address :Kuningan1')
+WebUI.verifyElementText(findTestObject('Page_ToolsQA/p_Current Address kuningan'), 'Current Address :Kuningan')
 
-WebUI.click(findTestObject(''))
-
-ExampleLoops bebas = new ExampleLoops()
-
-bebas.kotak(3)
+ExampleLoops.kotak(4)
 
 WebUI.closeBrowser()
 

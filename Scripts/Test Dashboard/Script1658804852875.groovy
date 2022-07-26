@@ -44,10 +44,6 @@ println(txtListHotel.size())
 
 println(txtListPending.size())
 
-ExampleLoops bebas = new ExampleLoops()
-
-bebas.kotak(3)
-
 WebUI.back()
 
 WebUI.getText(findTestObject('Travels/Page_Dashboard - PHPTRAVELS/h4_2'))
