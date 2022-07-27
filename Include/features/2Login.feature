@@ -16,9 +16,10 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-
+@tag
 Feature: Login Function
 
+	@invalid
   Scenario Outline: User Login Invalid
     Given User navigate to Website PHP Travels
     When User click button login page
@@ -30,19 +31,23 @@ Feature: Login Function
       | username  | password | status |
       | user2@phptravels.com | 6weEYLVRi3+STmppai9GiQ== | invalid username |
       | user@phptravels.com | 6weEYLVRi3+WzIa8VJE2kA== | invalid password |
-      
+	
+	@invalid      
   Scenario: User with null username
 		When User enter null username
 		Then User required username
 		
+	@invalid		
 	Scenario: User with null password
 		When User enter null password
 		Then User required password
-	
+		
+	@invalid	
 	Scenario: User login with invalid format email
 		When User enter invalid format email
 		Then User must enter valid format email
-		
+	
+	@valid	
 	Scenario: User login with valid login
 		When User enter valid login
 		Then User login successfully

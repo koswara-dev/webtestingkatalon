@@ -19,6 +19,7 @@
 
 Feature: Logout Function
   
-  Scenario Outline: User Logout Function
+  Scenario: User Logout Function
+  	Given User login
     When User click button logout
     Then User logout successfully

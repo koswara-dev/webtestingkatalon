@@ -3,7 +3,6 @@ import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
-import com.juaracoding.util.Util
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.checkpoint.Checkpoint
 import com.kms.katalon.core.checkpoint.CheckpointFactory
@@ -37,6 +36,9 @@ import com.kms.katalon.core.util.KeywordUtil
 
 import com.kms.katalon.core.webui.exception.WebElementNotFoundException
 
+import cucumber.api.Scenario
+import cucumber.api.java.After
+import cucumber.api.java.Before
 import cucumber.api.java.en.And
 import cucumber.api.java.en.Given
 import cucumber.api.java.en.Then
@@ -44,26 +46,14 @@ import cucumber.api.java.en.When
 
 
 
-class LogoutStep {
-	/**
-	 * The step definitions below match with Katalon sample Gherkin steps
-	 */
-
-	@Given("User login")
-	def User_login() {
-		Util.loggedIn()
+class TestHook {
+	@Before
+	public void beforeScenario(Scenario scenario) {
+		println('Before Scenario: '+scenario.getName())
 	}
 	
-	
-	@When("User click button logout")
-	def User_click_button_logout() {		
-		WebUI.click(findTestObject('Object Repository/Travels/Page_Logout/Button_Logout'))
-	}
-
-	@Then("User logout successfully")
-	def User_logout_successfully() {
-		String txtLogin = WebUI.getText(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/GetTextLogin'))
-		WebUI.verifyElementText(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/GetTextLogin'), txtLogin)
-		WebUI.closeBrowser()
+	@After
+	public void afterScenario(Scenario scenario) {
+		println('After Scenario: '+scenario.getName())
 	}
 }

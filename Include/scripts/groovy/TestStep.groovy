@@ -3,7 +3,6 @@ import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
-import com.juaracoding.util.Util
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.checkpoint.Checkpoint
 import com.kms.katalon.core.checkpoint.CheckpointFactory
@@ -44,26 +43,22 @@ import cucumber.api.java.en.When
 
 
 
-class LogoutStep {
+class TestStep {
 	/**
 	 * The step definitions below match with Katalon sample Gherkin steps
 	 */
-
-	@Given("User login")
-	def User_login() {
-		Util.loggedIn()
-	}
-	
-	
-	@When("User click button logout")
-	def User_click_button_logout() {		
-		WebUI.click(findTestObject('Object Repository/Travels/Page_Logout/Button_Logout'))
+	@Given("I want to write a step with (.*)")
+	def I_want_to_write_a_step_with_name(String name) {
+		println name
 	}
 
-	@Then("User logout successfully")
-	def User_logout_successfully() {
-		String txtLogin = WebUI.getText(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/GetTextLogin'))
-		WebUI.verifyElementText(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/GetTextLogin'), txtLogin)
-		WebUI.closeBrowser()
+	@When("I check for the (\\d+) in step")
+	def I_check_for_the_value_in_step(int value) {
+		println value
+	}
+
+	@Then("I verify the (.*) in step")
+	def I_verify_the_status_in_step(String status) {
+		println status
 	}
 }
