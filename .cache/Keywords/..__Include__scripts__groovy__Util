@@ -1,8 +1,8 @@
 {
-  "keywordFileContentHash": "73441A8C5FB6771EDC2DA0890BE7E4DB",
+  "keywordFileContentHash": "3AC85B86EC76551432C85AA14C85B2DC",
   "keywordClasses": [
     {
-      "name": "GoToLogin",
+      "name": "Util",
       "keywordMethods": []
     }
   ],

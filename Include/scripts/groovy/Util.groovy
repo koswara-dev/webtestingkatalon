@@ -18,13 +18,22 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 import internal.GlobalVariable
 
-public class GoToLogin {
-	
-	static void loginPage() {
+public class Util {
+
+	static void goToLoginPage() {
 		WebUI.openBrowser('')
 		WebUI.navigateToUrl('https://www.phptravels.net/')
 		WebUI.maximizeWindow()
 		WebUI.click(findTestObject('Object Repository/Travels/Page_PHPTRAVELS  Travel Technology Partner _11a09b/Page_Login'))
 	}
-	
+
+	static void loggedIn() {
+		WebUI.openBrowser('')
+		WebUI.navigateToUrl('https://www.phptravels.net/')
+		WebUI.maximizeWindow()
+		WebUI.click(findTestObject('Object Repository/Travels/Page_PHPTRAVELS  Travel Technology Partner _11a09b/Page_Login'))
+		WebUI.setText(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/input_Email_email'), 'user@phptravels.com')
+		WebUI.setEncryptedText(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/input_Password_password'), '6weEYLVRi3+STmppai9GiQ==')
+		WebUI.click(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/span_Login'))
+	}
 }

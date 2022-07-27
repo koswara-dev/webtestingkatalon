@@ -43,6 +43,6 @@ Feature: Login Function
 		When User enter invalid format email
 		Then User must enter valid format email
 		
-	Scenario: User login with valid username and password
-		When User enter valid username and password
+	Scenario: User login with valid login
+		When User enter valid login
 		Then User login successfully

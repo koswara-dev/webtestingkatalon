@@ -50,7 +50,7 @@ class LoginStep {
 	@Given("User navigate to Website PHP Travels")
 	def User_navigate_to_Website_PHP_Travels() {
 		WebUI.openBrowser('')
-		WebUI.navigateToUrl('https://www.phptravels.net/')		
+		WebUI.navigateToUrl('https://www.phptravels.net/')
 		WebUI.maximizeWindow()
 	}
 
@@ -58,13 +58,13 @@ class LoginStep {
 	def User_click_button_login_page() {
 		WebUI.click(findTestObject('Object Repository/Travels/Page_PHPTRAVELS  Travel Technology Partner _11a09b/Page_Login'))
 	}
-	
+
 	@And("User enter (.*) and (.*)")
 	def User_enter_username_and_password(String username, String password) {
-		WebUI.setText(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/input_Email_email'), username)		
+		WebUI.setText(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/input_Email_email'), username)
 		WebUI.setEncryptedText(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/input_Password_password'), password)
 	}
-	
+
 	@And("User click button login")
 	def User_click_button_login() {
 		WebUI.click(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/span_Login'))
@@ -72,62 +72,61 @@ class LoginStep {
 
 	@Then("User login with (.*) credentials")
 	def User_login_successfully(String status) {
-		WebUI.refresh()		
-		String txtME = WebUI.getText(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/Message_Fail'))		
+		WebUI.refresh()
+		String txtME = WebUI.getText(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/Message_Fail'))
 		WebUI.verifyElementText(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/Message_Fail'), txtME)
 		WebUI.closeBrowser()
 	}
-	
+
 	@When("User enter null username")
 	def User_enter_null_username() {
-		GoToLogin.loginPage()
+		Util.goToLoginPage()
 		WebUI.setText(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/input_Password_password'), 'test')
 		WebUI.click(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/span_Login'))
 	}
-	
+
 	@Then("User required username")
 	def User_required_username() {
 		WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/Message_Null_Username'), 'required', 'true', 0)
 	}
-	
+
 	@When("User enter null password")
 	def User_enter_null_password() {
 		WebUI.setText(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/input_Email_email'), 'user@phptravels.com')
 		WebUI.setText(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/input_Password_password'), '')
 		WebUI.click(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/span_Login'))
 	}
-	
+
 	@Then("User required password")
 	def User_required_password() {
-		WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/Message_Null_Password'), 'required', 'true', 0)		
+		WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/Message_Null_Password'), 'required', 'true', 0)
 	}
-	
+
 	@When("User enter invalid format email")
 	def User_enter_invalid_format_email() {
 		WebUI.setText(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/input_Email_email'), 'user')
 		WebUI.click(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/span_Login'))
 	}
-	
+
 	@Then("User must enter valid format email")
 	def User_must_enter_valid_format_email() {
 		WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/Message_Null_Username'), 'type', 'email', 0)
 		WebUI.closeBrowser()
 	}
-	
-	@When("User enter valid username and password")
-	def User_enter_valid_username_and_password() {
-		GoToLogin.loginPage()
+
+	@When("User enter valid login")
+	def User_enter_valid_login() {
+		Util.goToLoginPage()
 		WebUI.setText(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/input_Email_email'), 'user@phptravels.com')
 		WebUI.setEncryptedText(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/input_Password_password'), '6weEYLVRi3+STmppai9GiQ==')
 		WebUI.click(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/span_Login'))
 	}
-	
+
 	@Then("User login successfully")
 	def User_login_successfully() {
-		WebUI.refresh()		
-		String txtWB = WebUI.getText(findTestObject('Object Repository/Travels/Page_Dashboard - PHPTRAVELS/span_Welcome Back'))		
+		WebUI.refresh()
+		String txtWB = WebUI.getText(findTestObject('Object Repository/Travels/Page_Dashboard - PHPTRAVELS/span_Welcome Back'))
 		WebUI.verifyElementText(findTestObject('Travels/Page_Dashboard - PHPTRAVELS/span_Welcome Back'), txtWB)
 		WebUI.closeBrowser()
 	}
-	
 }
