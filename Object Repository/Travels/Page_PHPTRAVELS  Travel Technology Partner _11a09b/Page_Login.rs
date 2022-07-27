@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>a_Login</name>
+   <name>Page_Login</name>
    <tag></tag>
    <elementGuidId>776869e0-7265-4414-88da-08d2f060f88d</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//body[@id='fadein']/header/div/div/div/div[2]/div/div/a[2]</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>a.theme-btn.theme-btn-small.theme-btn-transparent.ml-1.waves-effect</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//body[@id='fadein']/header/div/div/div/div[2]/div/div/a[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

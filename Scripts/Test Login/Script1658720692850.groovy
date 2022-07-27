@@ -23,7 +23,7 @@ WebUI.navigateToUrl('https://www.phptravels.net/')
 
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('Object Repository/Travels/Page_PHPTRAVELS  Travel Technology Partner _11a09b/a_Login'))
+WebUI.click(findTestObject('Object Repository/Travels/Page_PHPTRAVELS  Travel Technology Partner _11a09b/Page_Login'))
 
 WebUI.setText(findTestObject('Object Repository/Travels/Page_Login - PHPTRAVELS/input_Email_email'), 'user@phptravels.com')
 
