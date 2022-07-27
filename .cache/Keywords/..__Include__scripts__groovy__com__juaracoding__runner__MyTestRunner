@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "6AF6404503A9285D07C640B97B07E926",
+  "keywordClasses": [
+    {
+      "name": "com.juaracoding.runner.MyTestRunner",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": false
+}
